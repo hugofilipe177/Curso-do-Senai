@@ -52,4 +52,6 @@ class Carousel {
     }
 }
 
+const edição = document.getElementsByTagName ('img');
+    edição.style.width = '5%' ;
 
