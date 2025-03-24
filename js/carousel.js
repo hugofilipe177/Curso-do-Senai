@@ -29,21 +29,25 @@ class Carousel {
         const carouselElement = document.getElementById('carousel');
         const UrlElement = document.getElementById ('carousel-title');
 
-        carouselElement.innerHTML = '';
-        UrlElement.innerHTML ='';
+        if(carouselElement && UrlElement ){
+        const slide_carrossel = carouselArr[Carousel._sequence]; 
         
+        carouselElement.style.backgroundImage = `url('img/${slide_carrossel.imagem}')`;
+        carouselElement.style.backgroundSize = 'cover';
+        carouselElement.innerHTML = '';
 
-        const img = document.createElement('img');
-        img.setAttribute('src', Carousel._arr[Carousel._sequence].imagem);
-        carouselElement.appendChild(img);
+        UrlElement.innerHTML = `<a href='${slide_carrossel.url}'> ${slide_carrossel.title} </a>`
 
-        const Url = document.createElement('a');
-        Url.href = Carousel._arr[Carousel._sequence].Url;
-        Url.textContent = Carousel._arr[Carousel._sequence].title;
-        UrlElement.appendChild(Url)
+
 
 
         Carousel._sequence = (Carousel._sequence + 1) % Carousel._size;
+        }
+        
+
+
+
+        
     }
 };
   

@@ -11,17 +11,16 @@ html {
 }
 
 div#carousel {
-    height: 46vh;
-    width: 100%;
+    
+    height: 65vh;
+    width: 70%;
      max-height: 628px;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
     text-align: center;
-    img{
-        height: 90%;
-        width: 50%;
-    }
+
+    
 }
 
 div#carousel-title a {
@@ -89,7 +88,10 @@ nav li {
 }
 
 main {
+    display: flex;
     min-height: calc(100% - 167px);
+    align-items: center;
+    flex-direction: column;
 }
 
 nav#social {
