@@ -17,6 +17,11 @@ div#carousel {
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+    text-align: center;
+    img{
+        height: 90%;
+        width: 50%;
+    }
 }
 
 div#carousel-title a {
@@ -29,6 +34,9 @@ div#carousel-title  {
     margin-top: 10px;
     margin-bottom: 10px;
     font-weight: bold;
+    a{
+        color: black;
+    }
 }
 
 header ul {
