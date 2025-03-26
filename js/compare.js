@@ -1,6 +1,7 @@
 
 //car
 let carArr = [];
+const checkagem_eliminacao = document.querySelectorAll('.checkbox');
 
 class Car {
    
@@ -34,14 +35,27 @@ function GetCarArrPosition(arr, carClass) {
 }
 
 function SetCarToCompare(el, carClass) {
-   
-    if(carClass instanceof Car){       
-        if(el.checked){
-                
+    if(carClass instanceof Car){
             
+        if(el.checked){
+        carArr.push(carClass);
+        console.log(carArr)
+
         } else {
+            carArr = carArr.filter(carro => carro.nome !== carClass.nome);
+            console.log(carArr);
           
         } 
+        if(carArr.length == 2 ){
+            checkagem_eliminacao.forEach( (checkbox) => {if(!checkbox.checked){
+                checkbox.setAttribute("disabled", true);
+            }} )
+
+        } else{
+            checkagem_eliminacao.forEach( (checkbox) => {if(!checkbox.checked){
+                checkbox.removeAttribute('disabled');
+            }})
+        }; 
     } else {
         throw "You need set a Car Class";
     }
@@ -63,5 +77,18 @@ function HideCompare(){
 }
 
 function UpdateCompareTable() {
-    
+    carArr.forEach((element, i) => {
+        document.getElementById('compare_image_' + i).innerHTML = `<img src="${element.image}" alt="${element.nome}">`;
+        document.getElementById('compare_modelo_' + i).innerText = element.nome;
+        document.getElementById('compare_alturacacamba_' + i).innerText = element.alturaCacamba;
+        document.getElementById('compare_alturaveiculo_' + i).innerText = element.alturaVeiculo;
+        document.getElementById('compare_alturasolo_' + i).innerText = element.alturaSolo;
+        document.getElementById('compare_capacidadecarga_' + i).innerText = element.capacidadeCarga;
+        document.getElementById('compare_motor_' + i).innerText = element.motor;
+        document.getElementById('compare_potencia_' + i).innerText = element.potencia;
+        document.getElementById('compare_volumecacamba_' + i).innerText = element.volumeCacamba;
+        document.getElementById('compare_roda_' + i).innerText = element.roda;
+        document.getElementById('compare_preco_' + i).innerText = element.preco;
+    });
+
 }
