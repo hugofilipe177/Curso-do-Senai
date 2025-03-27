@@ -25,29 +25,27 @@ class Carousel {
         }
     }
     static Next() {
+ 
+  const carouselElement = document.getElementById('carousel');
+  const titleElement = document.getElementById('carousel-title');
 
-        const carouselElement = document.getElementById('carousel');
-        const UrlElement = document.getElementById ('carousel-title');
+  
+  carouselElement.innerHTML = '';
+  titleElement.innerHTML = '';
 
-        if(carouselElement && UrlElement ){
-        const slide_carrossel = carouselArr[Carousel._sequence]; 
-        
-        carouselElement.style.backgroundImage = `url('img/${slide_carrossel.imagem}')`;
-        carouselElement.style.backgroundSize = 'cover';
-        carouselElement.innerHTML = '';
+ 
+  const img = document.createElement('img');
+  img.setAttribute('src', Carousel._arr[Carousel._sequence].imagem);
+  carouselElement.appendChild(img);
 
-        UrlElement.innerHTML = `<a href='${slide_carrossel.url}'> ${slide_carrossel.title} </a>`
+ 
+  const title = document.createElement('a');
+  title.setAttribute('href',  Carousel._arr[Carousel._sequence].url)
+  title.textContent = Carousel._arr[Carousel._sequence].title;
+  titleElement.appendChild(title);
 
-
-
-
-        Carousel._sequence = (Carousel._sequence + 1) % Carousel._size;
-        }
-        
-
-
-
-        
+  
+  Carousel._sequence = (Carousel._sequence + 1) % Carousel._size;
     }
 };
   

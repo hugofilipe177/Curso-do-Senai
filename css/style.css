@@ -11,18 +11,25 @@ html {
 }
 
 div#carousel {
-    height: 55vh;
     width: 60%;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
     text-align: center;
-
+    img{
+        width: 100%;   
+        border: 2px solid #1351d8;
+        border-radius: 10px;
+    }
     
 }
 
 div#carousel-title a {
+    font-size: 80%;
     text-decoration: none;
+}
+.logo{
+    width: 80%;
 }
 
 div#carousel-title  {
@@ -45,6 +52,8 @@ header ul {
 
 ul {
 	display: inline-block;
+    font-size: 1.2rem;
+
 }
 
 header {
@@ -52,6 +61,9 @@ header {
     border-bottom: 1px solid #ccc;
     margin-bottom: 10px;
     padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header div {
@@ -67,7 +79,6 @@ header nav {
 
 header nav a {
     color: #1351d8;
-    font-size: 20px;
     text-decoration: none;
     font-weight: 900;
     margin-left: 14px;
@@ -110,6 +121,8 @@ span.redesociais {
 footer {
     background: #1B357E;
     padding: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 footer div {

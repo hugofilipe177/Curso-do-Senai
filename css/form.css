@@ -1,17 +1,28 @@
 .fordform {
+    padding: 0;
+    margin: 0;
     display: block;
-    width: 300px;
+    width: 100%;
     border: 1px solid #cccccc;
     border-radius: 10px;
     height: 26px;
-    margin: 8px;
-    font-size: 13px;
-    padding: 5px;
+    font-size: 70%;
+    padding-block: 0px;
+    padding-inline: 0px;
 }
-
+#formsInt{
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+}
+form{
+    display: flex;
+    width: fit-content;
+    gap: 5px;
+    flex-direction: column;
+}
 select.fordform {
-    width: 310px;
-    height: 36px;
+
     color: #807d7d;
 }
 
@@ -32,8 +43,12 @@ main div {
 }
 
 .forms {
-    display: block;
+    display: flex;
     text-align: center;
+    width: 100%;
+    justify-content: center;
+    flex: 1;
+    align-items: center;
 }
 
 h2 {
@@ -51,4 +66,11 @@ button {
 
 .titulo {
     margin-left: 8px;
+}
+#areaTexto{
+    resize: none;
+    display: block;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    font-size: 100%;
 }
