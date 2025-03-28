@@ -2,6 +2,9 @@
 const carouselArr = [];
 
 
+
+
+
 class Carousel {
     constructor(Imagem, Title, Url) {
         this.imagem = Imagem;
@@ -10,6 +13,22 @@ class Carousel {
     }
 
     static Start(arr) {
+        carouselArr.forEach(carro => {
+            this.navigation = document.createElement('span');
+            this.navigation.classList.add('botao_carosel')
+            document.querySelector('#navegacao-carosel').insertAdjacentElement('afterbegin', this.navigation);
+            
+        
+            });
+        this.botoes = document.querySelectorAll('.botao_carosel');
+        this.botoes.forEach((element, i ) => {
+            element.addEventListener('click',()=>{
+                Carousel._sequence = i
+                this.Next()
+            })
+            
+        });
+
         if ( arr.length > 0) {
             Carousel._sequence = 0;
             Carousel._size = arr.length; 
@@ -33,10 +52,18 @@ class Carousel {
   carouselElement.innerHTML = '';
   titleElement.innerHTML = '';
 
- 
+
   const img = document.createElement('img');
   img.setAttribute('src', Carousel._arr[Carousel._sequence].imagem);
   carouselElement.appendChild(img);
+  this.botoes.forEach(element => {
+    if(element.classList.contains('botao_carosel_selecionado')){
+        element.classList.remove('botao_carosel_selecionado')
+    }
+        
+  });
+  this.botoes[Carousel._sequence].classList.add('botao_carosel_selecionado');
+
 
  
   const title = document.createElement('a');

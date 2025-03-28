@@ -91,4 +91,35 @@ div#compare {
     }
 
     };
-}
+    button {
+
+        margin-right: 8px;
+        float: right;
+        background-color: white;
+        border: 2px solid #1351d8;
+        color: #1351d8;    
+        transition: 1.5s;
+        
+    }
+    b:hover{
+        transform: scale(1.1);
+        color: white;
+        background-color: #1351d8;
+    
+    }
+    button {
+        width: 200px;
+        height: 40px;
+        margin-right: 8px;
+        background-color: white;
+        border: 2px solid #1351d8;
+        color: #1351d8;    
+        transition: 1.5s;
+        border-radius: 10px;
+    }
+    button:hover{
+        transform: scale(1.1);
+        color: white;
+        background-color: #1351d8;
+    
+    }

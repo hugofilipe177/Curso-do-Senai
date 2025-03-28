@@ -1,4 +1,7 @@
 @media screen and (max-width: 550px) {
+    #carousel-title{
+        font-size: 70%;
+    }
 }
 @media screen and (max-width: 380px) and (max-height: 867px) {
     header{
@@ -10,4 +13,22 @@
     footer{
         font-size: 10%;
     }    
+}
+@media screen and (max-width: 1000px) {
+    header nav a{
+        font-size: 90%;
+    }
+    
+}
+@media screen and (max-width: 460px) {
+    header nav a {
+        font-size: 80%;
+    }
+    
+}
+@media screen and (max-width: 320px) {
+    header nav a {
+        font-size: 60%;
+    }
+    
 }

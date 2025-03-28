@@ -35,11 +35,11 @@ select:focus-visible {
 }
 
 main div {
-    display: inline-block;
+    
     vertical-align: top;
     text-align: left;
     padding-top: 30px;
-    padding-bottom: 30px;
+
 }
 
 .forms {
@@ -47,12 +47,11 @@ main div {
     text-align: center;
     width: 100%;
     justify-content: center;
-    flex: 1;
     align-items: center;
 }
 
 h2 {
-    text-align: left;
+   
     font-weight: 800;
 }
 
@@ -62,6 +61,17 @@ button {
     height: 40px;
     margin-right: 8px;
     float: right;
+    background-color: white;
+    border: 2px solid #1351d8;
+    color: #1351d8;    
+    transition: 1.5s;
+    
+}
+button:hover{
+    transform: scale(1.1);
+    color: white;
+    background-color: #1351d8;
+
 }
 
 .titulo {

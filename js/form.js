@@ -18,19 +18,17 @@ function Post(form) {
             form.elements.namedItem('textarea').value,
             form.elements.namedItem("contato").value);
   console.log(data);
+  form.reset();
 }
 
 function Enviar() {
-    var nome = document.getElementById("nomeid");
+    
+    var nome = document.getElementById("nome");
 
 
     if (nome.value != "") {
         alert('Obrigado sr(a) ' + nome.value + ' os seus dados foram encaminhados com sucesso');
     }
-    const form = document.getElementById('formulario');
-    form.addEventListener('submit', function(event){
-        Enviar(event);
-        Post(form);
-    })
+
     
 }

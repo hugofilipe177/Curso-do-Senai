@@ -9,6 +9,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/form.css" rel="stylesheet">
     <link href="css/responsividade.css">
+    <link rel="stylesheet" href="css/responsividade.css">
     
 </head>
 <body>
@@ -38,8 +39,8 @@
             </div>
             <div id="formsInt">
                 <h2 class="titulo">Sobre Você</h2>
-            <form onsubmit="Post(this) ; return false" id="formulario">
-                <input type="text" name="nome" placeholder="NOME*" class="fordform" required>
+            <form onsubmit="Post(this); return false" id="formulario">
+                <input id="nome" type="text" name="nome" placeholder="NOME*" class="fordform" required>
                 <input type="text" name="email" placeholder="E-MAIL*" class="fordform" required>
                 <input type="text" name="telefone" placeholder="TELEFONE*" class="fordform" required>
                 <textarea name="textarea" name='textarea'id='areaTexto' placeholder="Mensagem" required></textarea>
@@ -49,7 +50,7 @@
                     <option>Reclamação</option>
                     <option>Solicitação</option>
                 </select>
-            <button type="submit" id="submite">Enviar</button>
+            <button type="submit" id="submite" onclick="Enviar(); Post()"><span>Enviar</span></button>
             </form>
             </div>
         </div>
