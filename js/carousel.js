@@ -1,7 +1,10 @@
-// Array para armazenar as instâncias do Carousel
+
 const carouselArr = [];
 
-// Classe Carousel
+
+
+
+
 class Carousel {
     constructor(Imagem, Title, Url) {
         this.imagem = Imagem;
@@ -10,16 +13,29 @@ class Carousel {
     }
 
     static Start(arr) {
-        // Verifica se o array foi passado e se não está vazio
-        if ( arr.length > 0) {
-            Carousel._sequence = 0; // Inicia a sequência no primeiro item
-            Carousel._size = arr.length; // Define o tamanho do array
-            Carousel._arr = arr; // Armazena o array para uso posterior
+        carouselArr.forEach(carro => {
+            this.navigation = document.createElement('span');
+            this.navigation.classList.add('botao_carosel')
+            document.querySelector('#navegacao-carosel').insertAdjacentElement('afterbegin', this.navigation);
+            
+        
+            });
+        this.botoes = document.querySelectorAll('.botao_carosel');
+        this.botoes.forEach((element, i ) => {
+            element.addEventListener('click',()=>{
+                Carousel._sequence = i
+                this.Next()
+            })
+            
+        });
 
-            // Exibe a primeira imagem e título
+        if ( arr.length > 0) {
+            Carousel._sequence = 0;
+            Carousel._size = arr.length; 
+            Carousel._arr = arr; 
+
             Carousel.Next();
 
-            // Inicia o intervalo para alternar os itens a cada 5 segundos
             Carousel._interval = setInterval(function () {
                 Carousel.Next();
             }, 2000);
@@ -27,31 +43,38 @@ class Carousel {
             throw "Method Start needs an Array Variable.";
         }
     }
-
     static Next() {
-        // Obtém o elemento do carrossel
-        const carouselElement = document.getElementById('carousel');
-        const titleElement = document.getElementById('carousel-title');
+ 
+  const carouselElement = document.getElementById('carousel');
+  const titleElement = document.getElementById('carousel-title');
 
-        // Limpa o conteúdo atual do carrossel e do título
-        carouselElement.innerHTML = '';
-        titleElement.innerHTML = '';
+  
+  carouselElement.innerHTML = '';
+  titleElement.innerHTML = '';
 
-        // Cria e exibe a próxima imagem
-        const img = document.createElement('img');
-        img.setAttribute('src', Carousel._arr[Carousel._sequence].imagem);
-        carouselElement.appendChild(img);
 
-        // Exibe o próximo título
-        const title = document.createElement('p');
-        title.textContent = Carousel._arr[Carousel._sequence].title;
-        titleElement.appendChild(title);
-
-        // Atualiza a sequência para o próximo item
-        Carousel._sequence = (Carousel._sequence + 1) % Carousel._size;
+  const img = document.createElement('img');
+  img.setAttribute('src', Carousel._arr[Carousel._sequence].imagem);
+  carouselElement.appendChild(img);
+  this.botoes.forEach(element => {
+    if(element.classList.contains('botao_carosel_selecionado')){
+        element.classList.remove('botao_carosel_selecionado')
     }
-}
+        
+  });
+  this.botoes[Carousel._sequence].classList.add('botao_carosel_selecionado');
 
 const edição = document.getElementsByTagName ('img');
     edição.style.width = '5%' ;
 
+ 
+  const title = document.createElement('a');
+  title.setAttribute('href',  Carousel._arr[Carousel._sequence].url)
+  title.textContent = Carousel._arr[Carousel._sequence].title;
+  titleElement.appendChild(title);
+
+  
+  Carousel._sequence = (Carousel._sequence + 1) % Carousel._size;
+    }
+};
+  

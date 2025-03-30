@@ -1,17 +1,28 @@
 .fordform {
+    padding: 0;
+    margin: 0;
     display: block;
-    width: 300px;
+    width: 100%;
     border: 1px solid #cccccc;
     border-radius: 10px;
     height: 26px;
-    margin: 8px;
-    font-size: 13px;
-    padding: 5px;
+    font-size: 70%;
+    padding-block: 0px;
+    padding-inline: 0px;
 }
-
+#formsInt{
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+}
+form{
+    display: flex;
+    width: fit-content;
+    gap: 5px;
+    flex-direction: column;
+}
 select.fordform {
-    width: 310px;
-    height: 36px;
+
     color: #807d7d;
 }
 
@@ -24,20 +35,23 @@ select:focus-visible {
 }
 
 main div {
-    display: inline-block;
+    
     vertical-align: top;
     text-align: left;
     padding-top: 30px;
-    padding-bottom: 30px;
+
 }
 
 .forms {
-    display: block;
+    display: flex;
     text-align: center;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 h2 {
-    text-align: left;
+   
     font-weight: 800;
 }
 
@@ -47,8 +61,27 @@ button {
     height: 40px;
     margin-right: 8px;
     float: right;
+    background-color: white;
+    border: 2px solid #1351d8;
+    border-radius: 10px;
+    color: #1351d8;    
+    transition: 1.5s;
+    
+}
+button:hover{
+    transform: scale(1.1);
+    color: white;
+    background-color: #1351d8;
+
 }
 
 .titulo {
     margin-left: 8px;
+}
+#areaTexto{
+    resize: none;
+    display: block;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    font-size: 100%;
 }
