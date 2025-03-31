@@ -1,10 +1,6 @@
 
 const carouselArr = [];
 
-
-
-
-
 class Carousel {
     constructor(Imagem, Title, Url) {
         this.imagem = Imagem;
@@ -64,8 +60,6 @@ class Carousel {
   });
   this.botoes[Carousel._sequence].classList.add('botao_carosel_selecionado');
 
-const edição = document.getElementsByTagName ('img');
-    edição.style.width = '5%' ;
 
  
   const title = document.createElement('a');

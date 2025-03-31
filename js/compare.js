@@ -10,7 +10,6 @@ class Car {
        this.preco = preco;
        this.alturaCacamba = alturaCacamba;
        this.alturaVeiculo = alturaVeiculo;
-       this.alturaVeiculo = alturaVeiculo;
        this.alturaSolo = alturaSolo;
        this.capacidadeCarga = capacidadeCarga;
        this.motor = motor;
@@ -38,15 +37,12 @@ function SetCarToCompare(el, carClass) {
             
         if(el.checked){
         carArr.push(carClass);
-        console.log(carArr)
 
         } else {
             carArr = carArr.filter(carro => carro.nome !== carClass.nome);
-            console.log(carArr);
+
           
         } 
-        console.log(checkagem_eliminacao)
-        console.log(carArr.length)
         if(carArr.length == 2 ){
             checkagem_eliminacao.forEach( (checkbox) => {if(!checkbox.checked){
                 checkbox.setAttribute("disabled", true);

@@ -1,13 +1,10 @@
-
+/* 
 ul.modelcars {
     display: block;
     text-align: center;
     margin-bottom: 40px;
     width: 100%;
-    li{
-        width: 1000vh;
- 
-    }
+
 }
 
 ul.modelcars li {
@@ -15,9 +12,7 @@ ul.modelcars li {
     text-align: left;
     width: 27%;
     vertical-align: top;
-           img{
-            width: 80%;
-        }
+
 }
 
 
@@ -129,4 +124,118 @@ div#compare {
         color: white;
         background-color: #1351d8;
     
+    } */
+     main{
+        display: flex;
+        flex-direction: column;
+     }
+
+ul.modelcars {
+    display: block;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+ul.modelcars li {
+    display: inline-block;
+    text-align: left;
+    width: 300px;
+    vertical-align: top;
+}
+
+img.photocar {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.checkbox {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #1b357e;
+}
+
+.infocar div {
+    display: inline-block;
+}
+
+.info {
+    width: 200px;
+    vertical-align: top;
+}
+
+.textmodel {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    color: #1351d8;
+    
+}
+.textprice {
+    display: block;
+    text-align: left;
+    font-size: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    margin-bottom: 10px;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+
+  td:nth-child(1) {  
+    font-weight: 700;
+    width: 40%;
+    img{
+        min-width: 95px;
     }
+  }
+
+  tr:nth-child(even) {background-color: #f2f2f2;}
+
+  div#compare {
+    position: absolute;
+    display: none;
+    flex: 1;
+    width: 50%;
+    height: 80vh;
+    max-height: 700px;
+    min-height: fit-content;
+    background: #fff;
+    top: calc(100vh - 80%);
+    left: 25vw;
+    border-radius: 10px;
+    padding: 10px;
+    -webkit-box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 34%);
+    box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 34%);
+    img{
+        width: 100%;
+        min-width: 95px;
+    };
+    td{
+        width: 20%;
+    }
+}
+button {
+    width: 200px;
+    height: 40px;
+    margin-right: 8px;
+    background-color: white;
+    border: 2px solid #1351d8;
+    color: #1351d8;    
+    transition: 1.5s;
+    border-radius: 10px;
+}
+button:hover{
+    transform: scale(1.1);
+    color: white;
+    background-color: #1351d8;
+}
