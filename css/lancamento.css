@@ -3,14 +3,23 @@ ul.modelcars {
     display: block;
     text-align: center;
     margin-bottom: 40px;
+    width: 100%;
+    li{
+        width: 1000vh;
+ 
+    }
 }
 
 ul.modelcars li {
     display: inline-block;
     text-align: left;
-    width: 300px;
+    width: 27%;
     vertical-align: top;
+           img{
+            width: 80%;
+        }
 }
+
 
 img.photocar {
     display: block;
@@ -69,13 +78,11 @@ table {
 div#compare {
     position: absolute;
     display: none;
-
+    flex: 1;
     width: 50%;
-    max-width: 800px;
-    min-width: 400px;
     height: 80vh;
     max-height: 700px;
-    min-height: 350px;
+    min-height: fit-content;
     background: #fff;
     top: calc(100vh - 80%);
     left: 25vw;

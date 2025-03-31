@@ -24,6 +24,9 @@
     header nav a {
         font-size: 80%;
     }
+    div#compare{
+        font-size: 60%;
+    }
     
 }
 @media screen and (max-width: 320px) {
@@ -35,6 +38,13 @@
 @media screen and (max-width: 520px) {
     .forms{
         flex-direction: column;
+    }
+    
+}
+@media screen and (max-width: 920px) {
+    div#compare{
+        min-width: fit-content;
+        left: 0;
     }
     
 }
