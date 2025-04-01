@@ -1,7 +1,6 @@
 const home = document.querySelector('#Home');
-if(home){
-    home.classList.add('Home')
-}
+    home.classList.add('hoverme')
+
 const lancamento = document.querySelector ('#lancamento')
 if(home && lancamento){    
     lancamento.addEventListener('mouseover', (event) =>{
