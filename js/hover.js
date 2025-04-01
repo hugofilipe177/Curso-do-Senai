@@ -20,7 +20,7 @@ if(home && contato){
     contato.addEventListener('mouseover', ()=> {
         contato.classList.add('hoverme');
         home.classList.remove('hoverme')
-    } )
+    })
 }
 if(home && contato){
         contato.addEventListener('mouseout', () =>{
