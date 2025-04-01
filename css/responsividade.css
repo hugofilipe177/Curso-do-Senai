@@ -48,3 +48,14 @@
     }
     
 }
+@media screen and (max-width: 760px) {
+   #video_e_texto{
+        flex-direction: column-reverse;
+    }
+    #texto{
+        width: 100%;
+    }
+    #videoFord{
+        width: 100%;
+    }
+}

@@ -85,3 +85,8 @@ button:hover{
     border-radius: 10px;
     font-size: 100%;
 }
+.hoverme{
+    border-top: 2px #1351d8 solid ;
+    transition: ease(2s);
+    transform: scale(1.5);
+}

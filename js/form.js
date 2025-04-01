@@ -32,3 +32,35 @@ function Enviar() {
 
     
 }
+const home = document.querySelector('#Home');
+if(home){
+        home.addEventListener('mouseover', ()=> {
+        home.classList.add('hoverme');
+        Contato.classList.remove('hoverme')
+    })
+}
+if(home){
+        home.addEventListener('mouseout', () =>{
+        home.classList.remove('hoverme')
+        Contato.classList.add('hoverme');
+})};
+    
+
+const lancamento = document.querySelector ('#lancamento')
+if(home && lancamento){    
+    lancamento.addEventListener('mouseover', (event) =>{
+    Contato.classList.remove('hoverme'); 
+    lancamento.classList.add('hoverme');
+    
+});}
+if(home && lancamento){
+    lancamento.addEventListener('mouseout', () =>{
+        lancamento.classList.remove('hoverme')
+        Contato.classList.add('hoverme');
+    })
+}
+
+const Contato = document.querySelector('#contato');
+Contato.classList.add('hoverme');
+
+console.log(contato)

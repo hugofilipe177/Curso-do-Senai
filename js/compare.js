@@ -89,3 +89,31 @@ function UpdateCompareTable() {
     });
 
 }
+const home = document.querySelector('#Home');
+if(home){    
+    home.addEventListener('mouseover', (event) =>{
+        lancamento.classList.remove('hoverme'); 
+        home.classList.add('hoverme');
+    
+});}
+if(home){
+    home.addEventListener('mouseout', () =>{
+        home.classList.remove('hoverme')
+        lancamento.classList.add('hoverme');
+    })
+}
+const lancamento = document.querySelector ('#lancamento');
+lancamento.classList.add('hoverme')
+
+const contato = document.querySelector ('#contato');
+if(contato){
+    contato.addEventListener('mouseover', ()=> {
+        contato.classList.add('hoverme');
+        lancamento.classList.remove('hoverme')
+    } )
+}
+if(home && contato){
+        contato.addEventListener('mouseout', () =>{
+        contato.classList.remove('hoverme')
+        lancamento.classList.add('hoverme');
+})};
