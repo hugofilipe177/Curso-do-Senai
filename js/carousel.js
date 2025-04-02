@@ -11,7 +11,7 @@ class Carousel {
     static Start(arr) {
         carouselArr.forEach(carro => {
             this.navigation = document.createElement('span');
-            this.navigation.classList.add('botao_carosel')
+            this.navigation.classList.add('botao_carosel');
             document.querySelector('#navegacao-carosel').insertAdjacentElement('afterbegin', this.navigation);
             
         

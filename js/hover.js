@@ -17,7 +17,7 @@ if(home && lancamento){
 
 const contato = document.querySelector ('#contato');
 if(home && contato){
-    contato.addEventListener('mouseover', ()=> {
+        contato.addEventListener('mouseover', ()=> {
         contato.classList.add('hoverme');
         home.classList.remove('hoverme')
     })

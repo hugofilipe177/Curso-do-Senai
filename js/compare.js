@@ -117,3 +117,6 @@ if(home && contato){
         contato.classList.remove('hoverme')
         lancamento.classList.add('hoverme');
 })};
+
+
+
