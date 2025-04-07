@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     display: block;
-    width: 100%;
+    width: 80%;
     border: 1px solid #cccccc;
     border-radius: 10px;
     height: 26px;
@@ -11,9 +11,16 @@
     padding-inline: 0px;
 }
 #formsInt{
+    width: 20%;
     gap: 5px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+
+
+}
+.checked{
+    scale: 1.2;
 }
 form{
     display: flex;
@@ -22,7 +29,7 @@ form{
     flex-direction: column;
 }
 select.fordform {
-
+    width: 80%;
     color: #807d7d;
 }
 
@@ -54,24 +61,29 @@ h2 {
    
     font-weight: 800;
 }
+.erro{
+    color: red;
+    font-size: 70%;
+}
 
 
 button {
     width: 200px;
     height: 40px;
+    margin-top: 2%;
     margin-right: 8px;
     float: right;
-    background-color: white;
-    border: 2px solid #1351d8;
-    border-radius: 10px;
-    color: #1351d8;    
+    background-color: #1351d8;
+    border: 2px solid #1B357E ;
+    border-radius: 10px;   
+    color: white;
     transition: 0.5s;
     
 }
 button:hover{
     transform: scale(1.1);
     color: white;
-    background-color: #1351d8;
+    background-color: #1B357E;
 
 }
 
@@ -84,6 +96,7 @@ button:hover{
     border: 1px solid #cccccc;
     border-radius: 10px;
     font-size: 100%;
+    width: 78.9%;
 }
 .hoverme{
     border-top: 2px #1351d8 solid ;
