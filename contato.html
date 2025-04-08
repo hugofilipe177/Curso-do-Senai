@@ -40,29 +40,21 @@
                 <h2 class="titulo">Sobre Você</h2>
             <form onsubmit="Post(this); return false" id="formulario">
                 <input id="nome" type="text" name="nome" placeholder="NOME*" class="fordform" required>
-                <span class="erro"></span>
                 <input type="text" name="email" placeholder="E-MAIL*" class="fordform" required>
-                <span class="erro"></span>
                 <input type="text" name="cpf" placeholder="CPF*" class="fordform" required>
-                <span class="erro"></span>
                 <input type="tel" name="telefone" placeholder="TELEFONE*" class="fordform" required>
-                <span class="erro"></span>
                 <textarea name="textarea" name='textarea'id='areaTexto' placeholder="Mensagem" required></textarea>
-                <span class="erro"></span>
                 <select name="contato" class="fordform" required>
                     <option selected disabled>tipo de Contato</option>
                     <option>Elogio</option>
                     <option>Reclamação</option>
                     <option>Solicitação</option>
                 </select>
-                <span class="erro"></span>
-              <p style="font-size: 90%;word-wrap: break-word;"> Os dados serão mantidos em nossa base de dados, só enquanto for desejado por você. A 
-qualquer momento, será possível editar ou remover tais dados.</p>
+              <p style="font-size: 90%;word-wrap: break-word;"> Os dados serão mantidos em nossa base de dados, só enquanto for desejado por você. A qualquer momento, será possível editar ou remover tais dados.<a href="https://www.ford.com.br/politica-de-privacidade/">Termos e Condições'</a></p>
                 <div style="display: flex;align-items: center; font-size: 90%; padding-top:2% ;">
                 <input type="checkbox" name="termosContrato" class="checked" id="obrigatorio" required> 
-                <p> Sim. Li e concordo com os <a href="https://www.ford.com.br/politica-de-privacidade/">Termos e Condições'</a></p>
+                <p> Sim. Li e concordo com os vossos Termos e Condições</p>
                 </div>
-                <span id="erro_checkbox" class="erro"></span>
                 <div style="display: flex;align-items: center; font-size: 90%;padding-top:2%">
                 <input type="checkbox" name="termosContrato" class="checked">
                 <p>Sim. Também quero receber descontos e novidades.</p>
